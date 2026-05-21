@@ -240,19 +240,9 @@ export default function App() {
     if (allAthletes.length > 0) {
       const isInitialized = localStorage.getItem('gym_selected_athletes_initialized') === 'true';
       if (!isInitialized) {
-        // Choose 5 default popular athletes from the seed data to avoid visual clutter
-        const defaults = ['Bartosz Jaszczak', 'Michał Wal.', 'Krzysztof Ostro.', 'Przemysław Grze.', 'Adam Lewa.']
-          .filter(name => allAthletes.includes(name));
-        
-        let initialSelection: string[] = [];
-        // If none of those found, pick first 5
-        if (defaults.length === 0) {
-          initialSelection = allAthletes.slice(0, 5);
-        } else {
-          initialSelection = defaults;
-        }
-        setSelectedAthletes(initialSelection);
-        localStorage.setItem('gym_selected_athletes', JSON.stringify(initialSelection));
+        // By default, no athletes are selected on the first run (empty chart)
+        setSelectedAthletes([]);
+        localStorage.setItem('gym_selected_athletes', JSON.stringify([]));
         localStorage.setItem('gym_selected_athletes_initialized', 'true');
       }
     }
