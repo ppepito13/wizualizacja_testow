@@ -1,0 +1,6 @@
+{
+  "name": "Wizualizacja Wyników Sprawnościowych",
+  "description": "Aplikacja do wizualizacji i porównywania wyników testów sprawnościowych zawodników na wykresach liniowych na przestrzeni lat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
