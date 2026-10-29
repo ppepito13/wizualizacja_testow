@@ -18,18 +18,20 @@ export interface AthleteRecord {
   burpeesComment: string | null;
   situps: number | null;
   situpsComment: string | null;
+  pullovers: number | null;
+  pulloversComment: string | null;
   date: string; // YYYY-MM-DD
 }
 
-export type ExerciseId = 'pullups' | 'pushups' | 'squats' | 'dips' | 'deadHang' | 'plank' | 'isometricSquat' | 'burpees' | 'situps';
+export type ExerciseId = 'pullups' | 'pushups' | 'squats' | 'dips' | 'deadHang' | 'plank' | 'isometricSquat' | 'burpees' | 'situps' | 'pullovers';
 
 export interface ExerciseConfig {
   id: ExerciseId;
   name: string;
   type: 'numeric' | 'duration';
-  valueKey: 'pullups' | 'pushups' | 'squats' | 'dips' | 'deadHangSeconds' | 'plankSeconds' | 'isometricSquatSeconds' | 'burpees' | 'situps';
+  valueKey: 'pullups' | 'pushups' | 'squats' | 'dips' | 'deadHangSeconds' | 'plankSeconds' | 'isometricSquatSeconds' | 'burpees' | 'situps' | 'pullovers';
   rawKey?: 'deadHangRaw' | 'plankRaw' | 'isometricSquatRaw';
-  commentKey: 'pullupsComment' | 'pushupsComment' | 'squatsComment' | 'dipsComment' | 'burpeesComment' | 'situpsComment' | null;
+  commentKey: 'pullupsComment' | 'pushupsComment' | 'squatsComment' | 'dipsComment' | 'burpeesComment' | 'situpsComment' | 'pulloversComment' | null;
   unit: string;
   color: string;
   description: string;

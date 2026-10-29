@@ -264,6 +264,7 @@ export default function App() {
       return EXERCISE_CONFIGS;
     }
     const filtered = EXERCISE_CONFIGS.filter(config => {
+      if (config.id === 'pullovers') return true;
       return records.some(record => {
         const val = record[config.valueKey];
         return val !== null && val !== undefined;
